@@ -9,17 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var brojac = 0
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    @IBOutlet weak var rezultat: UILabel!
+    
+    
+    
+    @IBAction func poen(_ sender: UIButton) {
+        brojac += 1
+        rezultat.text = "\(brojac)"
+    
+        
+    
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
+    
+    
+    
 
 }
 
