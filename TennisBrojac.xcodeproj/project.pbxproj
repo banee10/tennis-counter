@@ -12,6 +12,7 @@
 		3748E2E81E3D23D0000358F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3748E2E61E3D23D0000358F5 /* Main.storyboard */; };
 		3748E2EA1E3D23D0000358F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3748E2E91E3D23D0000358F5 /* Assets.xcassets */; };
 		3748E2ED1E3D23D0000358F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3748E2EB1E3D23D0000358F5 /* LaunchScreen.storyboard */; };
+		37E0DD021E410E3000A7ED5A /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0DD011E410E3000A7ED5A /* Counter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3748E2E91E3D23D0000358F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3748E2EC1E3D23D0000358F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3748E2EE1E3D23D0000358F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37E0DD011E410E3000A7ED5A /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				3748E2E21E3D23D0000358F5 /* AppDelegate.swift */,
 				3748E2E41E3D23D0000358F5 /* ViewController.swift */,
+				37E0DD011E410E3000A7ED5A /* Counter.swift */,
 				3748E2E61E3D23D0000358F5 /* Main.storyboard */,
 				3748E2E91E3D23D0000358F5 /* Assets.xcassets */,
 				3748E2EB1E3D23D0000358F5 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				3748E2E51E3D23D0000358F5 /* ViewController.swift in Sources */,
 				3748E2E31E3D23D0000358F5 /* AppDelegate.swift in Sources */,
+				37E0DD021E410E3000A7ED5A /* Counter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +304,7 @@
 				3748E2F31E3D23D0000358F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var brojac = 0
+    var brojac = Counter()
 
     
     @IBOutlet weak var rezultat: UILabel!
@@ -18,8 +18,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func poen(_ sender: UIButton) {
-        brojac += 1
-        rezultat.text = "\(brojac)"
+        
+        rezultat.text = "\(brojac.increment())"
     
         
     
