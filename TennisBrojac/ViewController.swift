@@ -22,6 +22,13 @@ class ViewController: UIViewController {
         rezultat.text = "\(brojac.increment())"
     
         
+        if rezultat.text == "\(45)" {
+            rezultat.text = "\(40)"
+        }
+        
+        
+    
+        
     
     }
     
