@@ -26,8 +26,10 @@ class ViewController: UIViewController {
             rezultat.text = "\(40)"
         }
         
-        
-    
+        if rezultat.text == "\(60)" {
+            rezultat.text = "\(brojac.reset())"
+            
+        }
         
     
     }

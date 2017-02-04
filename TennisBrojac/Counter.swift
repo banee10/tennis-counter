@@ -14,11 +14,7 @@ class Counter {
         count += 15
         return count
     }
-    func increment(by amount: Int) -> Int {
-        count += amount
-        return count
-    }
-    func reset() -> Int {
+        func reset() -> Int {
         count = 0
         return count
     }
