@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var rezultat: UILabel!
     
+    @IBOutlet weak var rezultat2: UILabel!
     
     
     @IBAction func poen(_ sender: UIButton) {
@@ -35,6 +36,23 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func poen2(_ sender: UIButton) {
+        
+        rezultat2.text = "\(brojac.increment())"
+        
+        
+        if rezultat2.text == "\(45)" {
+            rezultat2.text = "\(40)"
+        }
+        
+        if rezultat2.text == "\(60)" {
+            rezultat2.text = "\(brojac.reset())"
+            
+        }
+        
+
+        
+    }
     
     
 
