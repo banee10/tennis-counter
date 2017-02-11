@@ -14,8 +14,8 @@ class Counter {
         count += 15
         return count
     }
-        
-        func reset() -> Int {
+    
+    func reset() -> Int {
         count = 0
         return count
     }
@@ -39,7 +39,7 @@ class Counter3 {
     func incrementByOne() -> Int {
         count3 += 1
         return count3
-}
+    }
     func reset3() -> Int {
         count3 = 0
         return count3

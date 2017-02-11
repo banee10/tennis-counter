@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     var brojac = Counter()
     var brojac2 = Counter2()
@@ -23,13 +23,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var gemRez: UILabel!
     
     @IBOutlet weak var gemRez2: UILabel!
-
+    @IBOutlet weak var textF: UITextField!
+    
+    @IBOutlet weak var textField2: UITextField!
     
     
     @IBAction func poen(_ sender: UIButton) {
         
         rezultat.text = "\(brojac.increment())"
-    
+        
         
         if rezultat.text == "\(45)" {
             rezultat.text = "\(40)"
@@ -43,7 +45,7 @@ class ViewController: UIViewController {
             
         }
         
-    
+        
     }
     
     
@@ -64,7 +66,7 @@ class ViewController: UIViewController {
             
         }
         
-
+        
     }
     
     @IBAction func novaIgra(_ sender: UIButton) {
@@ -74,10 +76,30 @@ class ViewController: UIViewController {
         gemRez2.text = "\(brojac4.reset4())"
         
         
-
+        }
+    override func viewDidLoad() {
         
-    
+        super.viewDidLoad()
+        textF.delegate = self
+        textField2.delegate = self
+        
+        
     }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+        
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.textF.resignFirstResponder()
+        self.textField2.resignFirstResponder()
+    }
+
+    
     
 }
 
