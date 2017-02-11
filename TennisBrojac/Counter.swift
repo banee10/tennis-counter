@@ -14,9 +14,22 @@ class Counter {
         count += 15
         return count
     }
+        
         func reset() -> Int {
         count = 0
         return count
     }
 }
 
+class Counter2 {
+    var count2 = 0
+    func increment() -> Int {
+        count2 += 15
+        return count2
+    }
+    
+    func reset() -> Int {
+        count2 = 0
+        return count2
+    }
+}

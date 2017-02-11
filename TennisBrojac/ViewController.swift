@@ -11,11 +11,34 @@ import UIKit
 class ViewController: UIViewController {
     
     var brojac = Counter()
-
+    var brojac2 = Counter2()
     
     @IBOutlet weak var rezultat: UILabel!
     
     @IBOutlet weak var rezultat2: UILabel!
+    
+    
+    @IBOutlet weak var gemRez: UILabel!
+    
+    @IBOutlet weak var gemRez2: UILabel!
+    
+var count = 0
+  
+    func incrementByOne() -> Int {
+        count += 1
+        return count
+    }
+    var brojanje = 0
+    func incrementByOne2() -> Int {
+        brojanje += 1
+        return brojanje
+        
+    }
+
+    
+    
+    
+    
     
     
     @IBAction func poen(_ sender: UIButton) {
@@ -29,6 +52,9 @@ class ViewController: UIViewController {
         
         if rezultat.text == "\(60)" {
             rezultat.text = "\(brojac.reset())"
+            rezultat2.text = "\(brojac2.reset())"
+            
+            gemRez.text = "\(incrementByOne())"
             
         }
         
@@ -38,7 +64,7 @@ class ViewController: UIViewController {
     
     @IBAction func poen2(_ sender: UIButton) {
         
-        rezultat2.text = "\(brojac.increment())"
+        rezultat2.text = "\(brojac2.increment())"
         
         
         if rezultat2.text == "\(45)" {
@@ -46,15 +72,17 @@ class ViewController: UIViewController {
         }
         
         if rezultat2.text == "\(60)" {
-            rezultat2.text = "\(brojac.reset())"
+            rezultat2.text = "\(brojac2.reset())"
+            rezultat.text = "\(brojac.reset())"
+            
+            gemRez2.text = "\(incrementByOne2())"
             
         }
         
 
-        
     }
     
     
-
 }
+
 
