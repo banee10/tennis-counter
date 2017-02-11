@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
     var brojac = Counter()
     var brojac2 = Counter2()
+    var brojac3 = Counter3()
+    var brojac4 = Counter4()
     
     @IBOutlet weak var rezultat: UILabel!
     
@@ -21,24 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var gemRez: UILabel!
     
     @IBOutlet weak var gemRez2: UILabel!
-    
-var count = 0
-  
-    func incrementByOne() -> Int {
-        count += 1
-        return count
-    }
-    var brojanje = 0
-    func incrementByOne2() -> Int {
-        brojanje += 1
-        return brojanje
-        
-    }
 
-    
-    
-    
-    
     
     
     @IBAction func poen(_ sender: UIButton) {
@@ -52,9 +37,9 @@ var count = 0
         
         if rezultat.text == "\(60)" {
             rezultat.text = "\(brojac.reset())"
-            rezultat2.text = "\(brojac2.reset())"
+            rezultat2.text = "\(brojac2.reset2())"
             
-            gemRez.text = "\(incrementByOne())"
+            gemRez.text = "\(brojac3.incrementByOne())"
             
         }
         
@@ -72,16 +57,27 @@ var count = 0
         }
         
         if rezultat2.text == "\(60)" {
-            rezultat2.text = "\(brojac2.reset())"
+            rezultat2.text = "\(brojac2.reset2())"
             rezultat.text = "\(brojac.reset())"
             
-            gemRez2.text = "\(incrementByOne2())"
+            gemRez2.text = "\(brojac4.incrementByOne2())"
             
         }
         
 
     }
     
+    @IBAction func novaIgra(_ sender: UIButton) {
+        rezultat2.text = "\(brojac2.reset2())"
+        rezultat.text = "\(brojac.reset())"
+        gemRez.text = "\(brojac3.reset3())"
+        gemRez2.text = "\(brojac4.reset4())"
+        
+        
+
+        
+    
+    }
     
 }
 

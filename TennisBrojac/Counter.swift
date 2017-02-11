@@ -28,8 +28,32 @@ class Counter2 {
         return count2
     }
     
-    func reset() -> Int {
+    func reset2() -> Int {
         count2 = 0
         return count2
+    }
+}
+class Counter3 {
+    var count3 = 0
+    
+    func incrementByOne() -> Int {
+        count3 += 1
+        return count3
+}
+    func reset3() -> Int {
+        count3 = 0
+        return count3
+    }
+}
+class Counter4 {
+    var count4 = 0
+    
+    func incrementByOne2() -> Int {
+        count4 += 1
+        return count4
+    }
+    func reset4() -> Int {
+        count4 = 0
+        return count4
     }
 }
