@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var brojac3 = Counter3()
     var brojac4 = Counter4()
     
+    
     @IBOutlet weak var rezultat: UILabel!
     
     @IBOutlet weak var rezultat2: UILabel!
@@ -53,14 +54,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
         }
 
-        else if rezultat.text == "\(60)" && rezultat2.text == "\(60)" {
-            rezultat2.text = "\(40)"
-            rezultat.text = "\(40)"
+        else if rezultat.text == "Ad" && rezultat2.text == "\(60)" {
+            rezultat2.text = "\(brojac2.decrement())"
+            rezultat.text = "\(brojac.decrement())"
             
             
         }
+    
+    else if rezultat.text == "\(60)" && rezultat2.text == "Ad" {
+    rezultat2.text = "\(brojac2.decrement())"
+    rezultat.text = "\(brojac.decrement())"
+    
+    
+    }
 
-        else if rezultat.text == "\(75)" && rezultat2.text == "" {
+
+       /* else if rezultat.text == "\(75)" && rezultat2.text == "" {
             rezultat.text = "\(brojac.reset())"
             rezultat2.text = "\(brojac2.reset2())"
             
@@ -69,13 +78,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
             
             
-                // else if rezultat.text == "\(60)" {
-           // rezultat.text = "\(brojac.reset())"
-            // rezultat2.text = "\(brojac2.reset2())"
+        else if  rezultat.text == "\(60)" {
+            rezultat.text = "\(brojac.reset())"
+             rezultat2.text = "\(brojac2.reset2())"
             
-            //gemRez.text = "\(brojac3.incrementByOne())"
+           gemRez.text = "\(brojac3.incrementByOne())"
             
-        //}
+        } */
 
         
         
@@ -106,14 +115,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             
         }
-        else if rezultat.text == "\(60)" && rezultat2.text == "\(60)" {
-            rezultat2.text = "\(40)"
-            rezultat.text = "\(40)"
+        else if rezultat.text == "\(60)" && rezultat2.text == "Ad" {
+            rezultat2.text = "\(brojac2.decrement())"
+            rezultat.text = "\(brojac.decrement())"
+            
+            
+        }
+        else if rezultat.text == "Ad" && rezultat2.text == "\(60)" {
+            rezultat2.text = "\(brojac2.decrement())"
+            rezultat.text = "\(brojac.decrement())"
             
             
         }
 
-                else if rezultat.text == "" && rezultat2.text == "\(75)" {
+
+           /*     else if rezultat.text == "" && rezultat2.text == "\(75)" {
            rezultat.text = "\(brojac.reset())"
            rezultat2.text = "\(brojac2.reset2())"
             
@@ -121,13 +137,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
 
             
-               // else if rezultat2.text == "\(60)" {
-           // rezultat2.text = "\(brojac2.reset2())"
-           // rezultat.text = "\(brojac.reset())"
+                else if rezultat2.text == "\(60)" {
+            rezultat2.text = "\(brojac2.reset2())"
+            rezultat.text = "\(brojac.reset())"
             
-           // gemRez2.text = "\(brojac4.incrementByOne2())"
+            gemRez2.text = "\(brojac4.incrementByOne2())"
             
-       // }
+        } */
 
         
         
