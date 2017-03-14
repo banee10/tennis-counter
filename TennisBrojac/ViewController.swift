@@ -31,45 +31,47 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     
+    
     @IBAction func poen(_ sender: UIButton) {
         
         rezultat.text = "\(brojac.increment())"
         
         
         if rezultat.text == "\(45)" {
-            rezultat.text = "\(40)"
+           
+            rezultat.text = "\(brojac.decrement())"
         }
             
             
-        else if rezultat.text == "\(60)" && rezultat2.text == "\(40)" {
+        else if rezultat.text == "\(55)" && rezultat2.text == "\(40)" {
             rezultat2.text = ""
             rezultat.text = "Ad"
             
             
         }
-        else if rezultat.text == "\(40)" && rezultat2.text == "\(60)" {
+        else if rezultat.text == "\(40)" && rezultat2.text == "\(55)" {
             rezultat2.text = "Ad"
             rezultat.text = ""
             
             
         }
+ 
 
-        else if rezultat.text == "Ad" && rezultat2.text == "\(60)" {
-            rezultat2.text = "\(brojac2.decrement())"
-            rezultat.text = "\(brojac.decrement())"
-            
-            
+        else if rezultat.text == "Ad" && rezultat2.text == "\(55)" {
+           
+            rezultat.text = "\(brojac.decrementBy())"
+            rezultat2.text = "\(brojac2.decrementBy())"
         }
+            
+            
     
-    else if rezultat.text == "\(60)" && rezultat2.text == "Ad" {
-    rezultat2.text = "\(brojac2.decrement())"
-    rezultat.text = "\(brojac.decrement())"
-    
-    
-    }
+    else if rezultat.text == "\(55)" && rezultat2.text == "Ad" {
+            rezultat.text = "\(brojac.decrementBy())"
+            rezultat2.text = "\(brojac2.decrementBy())"
+        }
+          
 
-
-       /* else if rezultat.text == "\(75)" && rezultat2.text == "" {
+        else if rezultat.text == "\(70)" && rezultat2.text == "" {
             rezultat.text = "\(brojac.reset())"
             rezultat2.text = "\(brojac2.reset2())"
             
@@ -78,29 +80,29 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
             
             
-        else if  rezultat.text == "\(60)" {
+        else if  rezultat.text == "\(55)" {
             rezultat.text = "\(brojac.reset())"
              rezultat2.text = "\(brojac2.reset2())"
             
            gemRez.text = "\(brojac3.incrementByOne())"
             
-        } */
+        }
 
+   
         
         
-        
+    
+    
     }
-    
-    
     @IBAction func poen2(_ sender: UIButton) {
         
         rezultat2.text = "\(brojac2.increment())"
         
         
         if rezultat2.text == "\(45)" {
-            rezultat2.text = "\(40)"
+            rezultat2.text = "\(brojac2.decrement())"
         }
-        else if rezultat.text == "\(60)" && rezultat2.text == "\(40)" {
+        else if rezultat.text == "\(55)" && rezultat2.text == "\(40)" {
             rezultat2.text = ""
             rezultat.text = "Ad"
             
@@ -109,41 +111,39 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
             
             
-        else if rezultat.text == "\(40)" && rezultat2.text == "\(60)" {
+        else if rezultat.text == "\(40)" && rezultat2.text == "\(55)" {
             rezultat2.text = "Ad"
             rezultat.text = ""
             
             
         }
-        else if rezultat.text == "\(60)" && rezultat2.text == "Ad" {
-            rezultat2.text = "\(brojac2.decrement())"
-            rezultat.text = "\(brojac.decrement())"
             
-            
+        else if rezultat.text == "\(55)" && rezultat2.text == "Ad" {
+            rezultat.text = "\(brojac.decrementBy())"
+            rezultat2.text = "\(brojac2.decrementBy())"
+
         }
-        else if rezultat.text == "Ad" && rezultat2.text == "\(60)" {
-            rezultat2.text = "\(brojac2.decrement())"
-            rezultat.text = "\(brojac.decrement())"
-            
-            
+        else if rezultat.text == "Ad" && rezultat2.text == "\(55)" {
+            rezultat.text = "\(brojac.decrementBy())"
+            rezultat2.text = "\(brojac2.decrementBy())"
         }
 
 
-           /*     else if rezultat.text == "" && rezultat2.text == "\(75)" {
+               else if rezultat.text == "" && rezultat2.text == "\(70)" {
            rezultat.text = "\(brojac.reset())"
            rezultat2.text = "\(brojac2.reset2())"
             
-            gemRez2.text = "\(brojac3.incrementByOne())"
+            gemRez2.text = "\(brojac4.incrementByOne2())"
         }
 
             
-                else if rezultat2.text == "\(60)" {
+                else if rezultat2.text == "\(55)" {
             rezultat2.text = "\(brojac2.reset2())"
             rezultat.text = "\(brojac.reset())"
             
             gemRez2.text = "\(brojac4.incrementByOne2())"
             
-        } */
+        }
 
         
         
