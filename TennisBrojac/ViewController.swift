@@ -34,7 +34,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         
         if rezultat.text == "\(45)" {
-            rezultat.text = "\(40)"
+            rezultat.text = "\(brojac.decrement())"
         }
         
         if rezultat.text == "\(60)" {
