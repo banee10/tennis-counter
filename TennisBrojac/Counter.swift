@@ -14,6 +14,16 @@ class Counter {
         count += 15
         return count
     }
+    func decrement() -> Int {
+        count -= 5
+        return count
+    }
+    func decrementBy() -> Int {
+        count -= 15
+        return count
+        
+    }
+    
     
     func reset() -> Int {
         count = 0
@@ -27,10 +37,20 @@ class Counter2 {
         count2 += 15
         return count2
     }
+    func decrement() -> Int {
+        count2 -= 5
+        return count2
+    }
+    func decrementBy() -> Int {
+        count2 -= 15
+        return count2
+        
+    }
     
     func reset2() -> Int {
         count2 = 0
         return count2
+        
     }
 }
 class Counter3 {
@@ -40,6 +60,11 @@ class Counter3 {
         count3 += 1
         return count3
     }
+    func decrement() -> Int {
+        count3 -= 15
+        return count3
+    }
+    
     func reset3() -> Int {
         count3 = 0
         return count3
@@ -52,6 +77,11 @@ class Counter4 {
         count4 += 1
         return count4
     }
+    func decrement() -> Int {
+        count4 -= 20
+        return count4
+    }
+    
     func reset4() -> Int {
         count4 = 0
         return count4
