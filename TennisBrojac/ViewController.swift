@@ -55,16 +55,52 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         
         if rezultat2.text == "\(45)" {
-            rezultat2.text = "\(40)"
+            rezultat2.text = "\(brojac2.decrement())"
         }
-        
-        if rezultat2.text == "\(60)" {
+        else if rezultat.text == "\(55)" && rezultat2.text == "\(40)" {
+            rezultat2.text = ""
+            rezultat.text = "Ad"
+            
+            
+        }
+            
+            
+            
+        else if rezultat.text == "\(40)" && rezultat2.text == "\(55)" {
+            rezultat2.text = "Ad"
+            rezultat.text = ""
+            
+            
+        }
+            
+        else if rezultat.text == "\(55)" && rezultat2.text == "Ad" {
+            rezultat.text = "\(brojac.decrementBy())"
+            rezultat2.text = "\(brojac2.decrementBy())"
+            
+        }
+        else if rezultat.text == "Ad" && rezultat2.text == "\(55)" {
+            rezultat.text = "\(brojac.decrementBy())"
+            rezultat2.text = "\(brojac2.decrementBy())"
+        }
+            
+            
+        else if rezultat.text == "" && rezultat2.text == "\(70)" {
+            rezultat.text = "\(brojac.reset())"
+            rezultat2.text = "\(brojac2.reset2())"
+            
+            gemRez2.text = "\(brojac4.incrementByOne2())"
+        }
+            
+            
+        else if rezultat2.text == "\(55)" {
             rezultat2.text = "\(brojac2.reset2())"
             rezultat.text = "\(brojac.reset())"
             
             gemRez2.text = "\(brojac4.incrementByOne2())"
             
         }
+        
+        
         
         
     }
