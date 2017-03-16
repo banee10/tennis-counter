@@ -34,17 +34,55 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         
         if rezultat.text == "\(45)" {
+            
             rezultat.text = "\(brojac.decrement())"
         }
-        
-        if rezultat.text == "\(60)" {
+            
+            
+        else if rezultat.text == "\(55)" && rezultat2.text == "\(40)" {
+            rezultat2.text = ""
+            rezultat.text = "Ad"
+            
+            
+        }
+        else if rezultat.text == "\(40)" && rezultat2.text == "\(55)" {
+            rezultat2.text = "Ad"
+            rezultat.text = ""
+            
+            
+        }
+            
+            
+        else if rezultat.text == "Ad" && rezultat2.text == "\(55)" {
+            
+            rezultat.text = "\(brojac.decrementBy())"
+            rezultat2.text = "\(brojac2.decrementBy())"
+        }
+            
+            
+            
+        else if rezultat.text == "\(55)" && rezultat2.text == "Ad" {
+            rezultat.text = "\(brojac.decrementBy())"
+            rezultat2.text = "\(brojac2.decrementBy())"
+        }
+            
+            
+        else if rezultat.text == "\(70)" && rezultat2.text == "" {
             rezultat.text = "\(brojac.reset())"
             rezultat2.text = "\(brojac2.reset2())"
             
             gemRez.text = "\(brojac3.incrementByOne())"
             
         }
-        
+            
+            
+        else if  rezultat.text == "\(55)" {
+            rezultat.text = "\(brojac.reset())"
+            rezultat2.text = "\(brojac2.reset2())"
+            
+            gemRez.text = "\(brojac3.incrementByOne())"
+            
+        }
         
     }
     
@@ -112,7 +150,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         gemRez2.text = "\(brojac4.reset4())"
         
         
-        }
+    }
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -134,7 +172,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.textF.resignFirstResponder()
         self.textField2.resignFirstResponder()
     }
-
+    
     
     
 }
