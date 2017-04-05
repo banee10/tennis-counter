@@ -10,6 +10,31 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
+    
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        textF.delegate = self
+        textField2.delegate = self
+        
+        
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+        
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.textF.resignFirstResponder()
+        self.textField2.resignFirstResponder()
+    }
+    
+
+    
     var brojac = Counter()
     var brojac2 = Counter2()
     var brojac3 = Counter3()
@@ -38,9 +63,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     
-    
-    @IBAction func poen(_ sender: UIButton) {
-        
+    @IBAction func poen(_ sender: Any) {
+            
         rezultat.text = "\(brojac.increment())"
         
         
@@ -122,8 +146,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     }
-    @IBAction func poen2(_ sender: UIButton) {
-        
+    
+    
+    @IBAction func poen2(_ sender: Any) {
+            
         rezultat2.text = "\(brojac2.increment())"
         
         
@@ -210,28 +236,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         setRez2.text = "\(setBrojac2.reset6())"
         
     }
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        textF.delegate = self
-        textField2.delegate = self
-        
-        
-    }
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        textField.resignFirstResponder()
-        return true
-        
-        
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        self.textF.resignFirstResponder()
-        self.textField2.resignFirstResponder()
-    }
-    
     
     
 }
