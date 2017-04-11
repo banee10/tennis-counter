@@ -69,7 +69,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         
         if rezultat.text == "\(45)" {
-            
+           
             rezultat.text = "\(brojac.decrement())"
         }
             
@@ -86,32 +86,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             
         }
-            
-            
+ 
+
         else if rezultat.text == "Ad" && rezultat2.text == "\(55)" {
-            
+           
             rezultat.text = "\(brojac.decrementBy())"
             rezultat2.text = "\(brojac2.decrementBy())"
         }
             
             
-            
-        else if rezultat.text == "\(55)" && rezultat2.text == "Ad" {
+    
+    else if rezultat.text == "\(55)" && rezultat2.text == "Ad" {
             rezultat.text = "\(brojac.decrementBy())"
             rezultat2.text = "\(brojac2.decrementBy())"
         }
-            
-            
+          
+
         else if rezultat.text == "\(70)" && rezultat2.text == "" {
-            rezultat.text = "\(brojac.reset())"
-            rezultat2.text = "\(brojac2.reset2())"
-            
-            gemRez.text = "\(brojac3.incrementByOne())"
-            
-        }
-            
-            
-        else if  rezultat.text == "\(55)" {
             rezultat.text = "\(brojac.reset())"
             rezultat2.text = "\(brojac2.reset2())"
             
@@ -127,7 +118,33 @@ class ViewController: UIViewController, UITextFieldDelegate {
            gemRez.text = "\(brojac3.incrementByOne())"
             
         }
+        else if gemRez.text == "\(6)" && gemRez2.text! < "\(5)" {
+            gemRez.text = "\(brojac3.reset3())"
+            gemRez2.text = "\(brojac4.reset4())"
+            setRez.text = "\(setBrojac.incrementByOne())"
+        }
+
+        else if gemRez2.text == "\(6)" && gemRez.text! < "\(5)" {
+            gemRez.text = "\(brojac3.reset3())"
+            gemRez2.text = "\(brojac4.reset4())"
+            setRez2.text = "\(setBrojac2.incrementByOne())"
+        }
+
+        else if gemRez.text == "\(7)" && gemRez2.text! == "\(5)" {
+            gemRez.text = "\(brojac3.reset3())"
+            gemRez2.text = "\(brojac4.reset4())"
+            setRez.text = "\(setBrojac.incrementByOne())"
+        }
+            
+        else if gemRez2.text == "\(7)" && gemRez.text! == "\(5)" {
+            gemRez.text = "\(brojac3.reset3())"
+            gemRez2.text = "\(brojac4.reset4())"
+            setRez2.text = "\(setBrojac2.incrementByOne())"
+        }
+
         
+    
+    
     }
     
     
@@ -145,7 +162,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             
         }
-            
+
             
             
         else if rezultat.text == "\(40)" && rezultat2.text == "\(55)" {
@@ -158,23 +175,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
         else if rezultat.text == "\(55)" && rezultat2.text == "Ad" {
             rezultat.text = "\(brojac.decrementBy())"
             rezultat2.text = "\(brojac2.decrementBy())"
-            
+
         }
         else if rezultat.text == "Ad" && rezultat2.text == "\(55)" {
             rezultat.text = "\(brojac.decrementBy())"
             rezultat2.text = "\(brojac2.decrementBy())"
         }
+
+
+               else if rezultat.text == "" && rezultat2.text == "\(70)" {
+           rezultat.text = "\(brojac.reset())"
+           rezultat2.text = "\(brojac2.reset2())"
             
-            
-        else if rezultat.text == "" && rezultat2.text == "\(70)" {
-            rezultat.text = "\(brojac.reset())"
-            rezultat2.text = "\(brojac2.reset2())"
-            
-            gemRez2.text = "\(brojac4.incrementByOne2())"
+            gemRez2.text = "\(brojac4.incrementByOne())"
         }
+
             
-            
-        else if rezultat2.text == "\(55)" {
+                else if rezultat2.text == "\(55)" {
             rezultat2.text = "\(brojac2.reset2())"
             rezultat.text = "\(brojac.reset())"
             
@@ -208,8 +225,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         
         
-        
-        
     }
     
     @IBAction func novaIgra(_ sender: UIButton) {
@@ -217,31 +232,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         rezultat.text = "\(brojac.reset())"
         gemRez.text = "\(brojac3.reset3())"
         gemRez2.text = "\(brojac4.reset4())"
-        
-        
-    }
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        textF.delegate = self
-        textField2.delegate = self
-        
+        setRez.text = "\(setBrojac.reset5())"
+        setRez2.text = "\(setBrojac2.reset6())"
         
     }
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        textField.resignFirstResponder()
-        return true
-        
-        
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        self.textF.resignFirstResponder()
-        self.textField2.resignFirstResponder()
-    }
-    
     
     
 }
