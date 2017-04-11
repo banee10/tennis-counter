@@ -73,7 +73,7 @@ class Counter3 {
 class Counter4 {
     var count4 = 0
     
-    func incrementByOne2() -> Int {
+    func incrementByOne() -> Int {
         count4 += 1
         return count4
     }
@@ -87,3 +87,38 @@ class Counter4 {
         return count4
     }
 }
+class Counter5 {
+    var count5 = 0
+    
+    func incrementByOne() -> Int {
+        count5 += 1
+        return count5
+    }
+    
+    func reset5() -> Int {
+        count5 = 0
+        return count5
+    }
+}
+
+class Counter6 {
+    var count6 = 0
+    
+    func incrementByOne() -> Int {
+        count6 += 1
+        return count6
+    }
+    
+    func reset6() -> Int {
+        count6 = 0
+        return count6
+    }
+}
+
+
+
+
+
+
+
+

@@ -10,10 +10,38 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
+    
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        textF.delegate = self
+        textField2.delegate = self
+        
+        
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+        
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.textF.resignFirstResponder()
+        self.textField2.resignFirstResponder()
+    }
+    
+
+    
     var brojac = Counter()
     var brojac2 = Counter2()
     var brojac3 = Counter3()
     var brojac4 = Counter4()
+    var setBrojac = Counter5()
+    var setBrojac2 = Counter6()
+    
     
     @IBOutlet weak var rezultat: UILabel!
     
@@ -23,13 +51,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var gemRez: UILabel!
     
     @IBOutlet weak var gemRez2: UILabel!
+    
+    @IBOutlet weak var setRez: UILabel!
+    
+    @IBOutlet weak var setRez2: UILabel!
+    
     @IBOutlet weak var textF: UITextField!
     
     @IBOutlet weak var textField2: UITextField!
     
     
-    @IBAction func poen(_ sender: UIButton) {
-        
+    
+    
+    @IBAction func poen(_ sender: Any) {
+            
         rezultat.text = "\(brojac.increment())"
         
         
@@ -81,14 +116,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
             rezultat2.text = "\(brojac2.reset2())"
             
             gemRez.text = "\(brojac3.incrementByOne())"
+
+        }
+            
+            
+        else if  rezultat.text == "\(55)" {
+            rezultat.text = "\(brojac.reset())"
+             rezultat2.text = "\(brojac2.reset2())"
+            
+           gemRez.text = "\(brojac3.incrementByOne())"
             
         }
         
     }
     
     
-    @IBAction func poen2(_ sender: UIButton) {
-        
+    @IBAction func poen2(_ sender: Any) {
+            
         rezultat2.text = "\(brojac2.increment())"
         
         
@@ -134,9 +178,34 @@ class ViewController: UIViewController, UITextFieldDelegate {
             rezultat2.text = "\(brojac2.reset2())"
             rezultat.text = "\(brojac.reset())"
             
-            gemRez2.text = "\(brojac4.incrementByOne2())"
+            gemRez2.text = "\(brojac4.incrementByOne())"
             
         }
+        else if gemRez2.text == "\(6)" && gemRez.text! < "\(5)" {
+            gemRez.text = "\(brojac3.reset3())"
+            gemRez2.text = "\(brojac4.reset4())"
+            setRez2.text = "\(setBrojac2.incrementByOne())"
+        }
+            
+        else if gemRez.text == "\(6)" && gemRez2.text! < "\(5)" {
+            gemRez.text = "\(brojac3.reset3())"
+            gemRez2.text = "\(brojac4.reset4())"
+            setRez.text = "\(setBrojac.incrementByOne())"
+
+        }
+        else if gemRez.text == "\(7)" && gemRez2.text! == "\(5)" {
+            gemRez.text = "\(brojac3.reset3())"
+            gemRez2.text = "\(brojac4.reset4())"
+            setRez.text = "\(setBrojac.incrementByOne())"
+        }
+            
+        else if gemRez2.text == "\(7)" && gemRez.text! == "\(5)" {
+            gemRez.text = "\(brojac3.reset3())"
+            gemRez2.text = "\(brojac4.reset4())"
+            setRez2.text = "\(setBrojac2.incrementByOne())"
+
+        }
+
         
         
         
