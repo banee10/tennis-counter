@@ -10,6 +10,12 @@ import Foundation
 
 class Counter {
     var count = 0
+    
+    func incrementByOne() -> Int {
+        count += 1
+        return count
+    }
+
     func increment() -> Int {
         count += 15
         return count
@@ -33,6 +39,12 @@ class Counter {
 
 class Counter2 {
     var count2 = 0
+    
+    func incrementByOne() -> Int {
+        count2 += 1
+        return count2
+    }
+
     func increment() -> Int {
         count2 += 15
         return count2

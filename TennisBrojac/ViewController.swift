@@ -60,12 +60,26 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var textField2: UITextField!
     
+    func playTieBreak() {
+        if gemRez.text == "\(6)" && gemRez2.text == "\(6)" {
+            
+            
+            rezultat.text = "\(brojac.incrementByOne())"
+            rezultat2.text = "\(brojac2.incrementByOne())"
+            
+        }
+        
+    }
+    
+    
+    
     
     
     
     @IBAction func poen(_ sender: Any) {
-            
+        
         rezultat.text = "\(brojac.increment())"
+        
         
         
         if rezultat.text == "\(45)" {
@@ -118,6 +132,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
            gemRez.text = "\(brojac3.incrementByOne())"
             
         }
+        else if gemRez.text == "\(6)" && gemRez2.text == "\(6)" {
+            
+            
+            rezultat.text = "\(brojac.incrementByOne())"
+            rezultat2.text = "\(brojac2.incrementByOne())"
+            
+        }
+    
+            
         else if gemRez.text == "\(6)" && gemRez2.text! < "\(5)" {
             gemRez.text = "\(brojac3.reset3())"
             gemRez2.text = "\(brojac4.reset4())"
@@ -149,8 +172,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func poen2(_ sender: Any) {
-            
-        rezultat2.text = "\(brojac2.increment())"
+        
+        
+        
+            rezultat2.text = "\(brojac2.increment())"
+         
         
         
         if rezultat2.text == "\(45)" {
@@ -198,6 +224,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
             gemRez2.text = "\(brojac4.incrementByOne())"
             
         }
+        else if gemRez.text == "\(6)" && gemRez2.text == "\(6)" {
+            
+            
+            rezultat.text = "\(brojac.incrementByOne())"
+            rezultat2.text = "\(brojac2.incrementByOne())"
+            
+        }
+
         else if gemRez2.text == "\(6)" && gemRez.text! < "\(5)" {
             gemRez.text = "\(brojac3.reset3())"
             gemRez2.text = "\(brojac4.reset4())"
@@ -236,6 +270,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         setRez2.text = "\(setBrojac2.reset6())"
         
     }
+    
     
     
 }
