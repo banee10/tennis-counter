@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.textField2.resignFirstResponder()
     }
     
-
+    
     
     var brojac = Counter()
     var brojac2 = Counter2()
@@ -60,56 +60,72 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var textField2: UITextField!
     
-    var displayValue: Int {
-        get {
-            return Int(rezultat.text!)!
-            
-        }
-        set {
-            rezultat.text = String(newValue)
-            
-            
-        }
-    }
-    var displayValue2: Int {
-        get {
-            return Int(rezultat2.text!)!
-            
-        }
-        set {
-            rezultat2.text = String(newValue)
-            
-            
-        }
-    }
-    
-    
+    /* var displayValue: Int {
+     get {
+     return Int(rezultat.text!)!
+     
+     }
+     set {
+     rezultat.text = String(newValue)
+     
+     
+     }
+     }
+     var displayValue2: Int {
+     get {
+     return Int(rezultat2.text!)!
+     
+     }
+     set {
+     rezultat2.text = String(newValue)
+     
+     
+     }
+     }
+     
+     */
     
     
     
     
     @IBAction func poen(_ sender: Any) {
         if gemRez.text == "\(6)" && gemRez2.text == "\(6)" {
-            displayValue = brojac.incrementByOne()
+            rezultat.text = "\(brojac.incrementByOne())"
         }
             
-        else if displayValue == 7 && displayValue2 < 6 {
-            displayValue = brojac.reset0()
-        
-            displayValue2 = brojac2.reset00()
-
-        }
-        else if displayValue >= 6 && displayValue2 >= 6 &&
-            displayValue == displayValue2 + 2 {
-            displayValue = brojac.reset0()
-            displayValue2 = brojac2.reset00()
-            
-
+        else if rezultat.text! == "\(7)" && rezultat2.text! < "\(6)" {
+            rezultat.text = "\(brojac.reset0())"
+            rezultat.text = "\(brojac.reset())"
+            rezultat2.text = "\(brojac2.reset2())"
             
             
             
+            rezultat2.text = "\(brojac2.reset00())"
         }
             
+        else if rezultat2.text! == "\(7)" && rezultat.text! < "\(6)" {
+            rezultat2.text = "\(brojac2.reset00())"
+            rezultat.text = "\(brojac.reset0())"
+            rezultat.text = "\(brojac.reset())"
+            rezultat2.text = "\(brojac2.reset2())"
+            
+            
+        }
+            
+            
+            
+            
+            /* else if rezultat.text! >= "\(6)" && displayValue2 >= 6 &&
+             displayValue == displayValue2 + 2 {
+             rezultat.text = "\(brojac.reset0())"
+             displayValue2 = brojac2.reset00()
+             
+             
+             
+             
+             
+             }
+             */
         else { rezultat.text = "\(brojac.increment())"
         }
         
@@ -192,24 +208,39 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         
     }
-
-        
-        
+    
+    
+    
     @IBAction func poen2(_ sender: Any) {
         if gemRez.text == "\(6)" && gemRez2.text == "\(6)" {
-            displayValue2 = brojac2.incrementByOne()
+            rezultat2.text = "\(brojac2.incrementByOne())"
         }
-        else if displayValue2 == 7 && displayValue < 6 {
-            displayValue2 = brojac2.reset00()
-            displayValue = brojac.reset0()
-        }
+        else if rezultat2.text! == "\(7)" && rezultat.text! < "\(6)" {
+            rezultat2.text = "\(brojac2.reset00())"
+            rezultat.text = "\(brojac.reset0())"
+            rezultat.text = "\(brojac.reset())"
+            rezultat2.text = "\(brojac2.reset2())"
             
-        else if displayValue2 >= 6 && displayValue >= 6 &&
-            displayValue2 == displayValue + 2 {
-            displayValue = brojac.reset0()
-            displayValue2 = brojac2.reset00()
             
         }
+            
+            
+            
+        else if rezultat.text! == "\(7)" && rezultat2.text! < "\(6)" {
+            rezultat.text = "\(brojac.reset0())"
+            rezultat.text = "\(brojac.reset())"
+            rezultat2.text = "\(brojac2.reset2())"
+            rezultat2.text = "\(brojac2.reset00())"
+        }
+            
+            
+            
+            /*   else if displayValue2 >= 6 && rezultat.text! >= "\(6)" &&
+             displayValue2 == displayValue + 2 {
+             rezultat.text = "\(brojac.reset0())"
+             displayValue2 = brojac2.reset00()
+             
+             } */
             
         else {
             
@@ -286,9 +317,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
         }
     }
-        
-        
-        
+    
+    
+    
     @IBAction func novaIgra(_ sender: UIButton) {
         rezultat2.text = "\(brojac2.reset2())"
         rezultat.text = "\(brojac.reset())"
