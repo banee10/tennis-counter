@@ -90,27 +90,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func poen(_ sender: Any) {
         if gemRez.text == "\(6)" && gemRez2.text == "\(6)" {
+            print ("tie break")
+
             rezultat.text = "\(brojac.incrementByOne())"
-        }
-            
-        else if rezultat.text! == "\(7)" && rezultat2.text! < "\(6)" {
-            rezultat.text = "\(brojac.reset0())"
-            rezultat.text = "\(brojac.reset())"
-            rezultat2.text = "\(brojac2.reset2())"
-            
-            
-            
-            rezultat2.text = "\(brojac2.reset00())"
-        }
-            
-        else if rezultat2.text! == "\(7)" && rezultat.text! < "\(6)" {
-            rezultat2.text = "\(brojac2.reset00())"
-            rezultat.text = "\(brojac.reset0())"
-            rezultat.text = "\(brojac.reset())"
-            rezultat2.text = "\(brojac2.reset2())"
-            
             
         }
+            
             
             
             
@@ -180,6 +165,31 @@ class ViewController: UIViewController, UITextFieldDelegate {
             gemRez.text = "\(brojac3.incrementByOne())"
             
         }
+        else if rezultat.text! == "\(7)" && rezultat2.text! < "\(6)" {
+            print ("set")
+            rezultat.text = "\(brojac.reset0())"
+            rezultat.text = "\(brojac.reset())"
+            rezultat2.text = "\(brojac2.reset2())"
+            rezultat2.text = "\(brojac2.reset00())"
+            setRez.text = "\(setBrojac.incrementByOne())"
+            gemRez.text = "\(brojac3.reset3())"
+            gemRez2.text = "\(brojac4.reset4())"
+        }
+            
+        else if rezultat2.text! == "\(7)" && rezultat.text! < "\(6)" {
+            print ("set")
+            
+            rezultat2.text = "\(brojac2.reset00())"
+            rezultat.text = "\(brojac.reset0())"
+            rezultat.text = "\(brojac.reset())"
+            rezultat2.text = "\(brojac2.reset2())"
+            setRez2.text = "\(setBrojac2.incrementByOne())"
+            gemRez.text = "\(brojac3.reset3())"
+            gemRez2.text = "\(brojac4.reset4())"
+            
+            
+        }
+
         else if gemRez.text == "\(6)" && gemRez2.text! < "\(5)" {
             gemRez.text = "\(brojac3.reset3())"
             gemRez2.text = "\(brojac4.reset4())"
@@ -213,9 +223,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func poen2(_ sender: Any) {
         if gemRez.text == "\(6)" && gemRez2.text == "\(6)" {
+            print ("tie break")
+
             rezultat2.text = "\(brojac2.incrementByOne())"
         }
         else if rezultat2.text! == "\(7)" && rezultat.text! < "\(6)" {
+            print ("set")
+
             rezultat2.text = "\(brojac2.reset00())"
             rezultat.text = "\(brojac.reset0())"
             rezultat.text = "\(brojac.reset())"
@@ -227,6 +241,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             
         else if rezultat.text! == "\(7)" && rezultat2.text! < "\(6)" {
+            print ("set")
+
             rezultat.text = "\(brojac.reset0())"
             rezultat.text = "\(brojac.reset())"
             rezultat2.text = "\(brojac2.reset2())"
@@ -292,6 +308,32 @@ class ViewController: UIViewController, UITextFieldDelegate {
             gemRez2.text = "\(brojac4.incrementByOne())"
             
         }
+        else if rezultat.text! == "\(7)" && rezultat2.text! < "\(6)" {
+            print ("set")
+            rezultat.text = "\(brojac.reset0())"
+            rezultat.text = "\(brojac.reset())"
+            rezultat2.text = "\(brojac2.reset2())"
+            rezultat2.text = "\(brojac2.reset00())"
+            setRez.text = "\(setBrojac.incrementByOne())"
+            gemRez.text = "\(brojac3.reset3())"
+            gemRez2.text = "\(brojac4.reset4())"
+
+        }
+            
+        else if rezultat2.text! == "\(7)" && rezultat.text! < "\(6)" {
+            print ("set")
+            
+            rezultat2.text = "\(brojac2.reset00())"
+            rezultat.text = "\(brojac.reset0())"
+            rezultat.text = "\(brojac.reset())"
+            rezultat2.text = "\(brojac2.reset2())"
+            setRez2.text = "\(setBrojac2.incrementByOne())"
+            gemRez.text = "\(brojac3.reset3())"
+            gemRez2.text = "\(brojac4.reset4())"
+            
+            
+        }
+
         else if gemRez2.text == "\(6)" && gemRez.text! < "\(5)" {
             gemRez.text = "\(brojac3.reset3())"
             gemRez2.text = "\(brojac4.reset4())"
