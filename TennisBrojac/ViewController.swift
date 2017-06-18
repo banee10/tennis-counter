@@ -60,29 +60,32 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var textField2: UITextField!
     
-     private var displayValue: Int {
-     get {
-     return Int(rezultat.text!)!
-     
-     }
-     set {
-     rezultat.text = String(newValue)
-     
-     
-     }
-     }
-     private var displayValue2: Int {
-     get {
-     return Int(rezultat2.text!)!
-     
-     }
-     set {
-     rezultat2.text = String(newValue)
-     
-     
-     }
-     }
-     
+    
+    
+    
+    private var displayValue: Int {
+        get {
+            return Int(rezultat.text!)!
+            
+        }
+        set {
+            rezultat.text = String(newValue)
+            
+            
+        }
+    }
+    private var displayValue2: Int {
+        get {
+            return Int(rezultat2.text!)!
+            
+        }
+        set {
+            rezultat2.text = String(newValue)
+            
+            
+        }
+    }
+    
     
     
     
@@ -90,8 +93,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func poen(_ sender: Any) {
         if gemRez.text == "\(6)" && gemRez2.text == "\(6)" {
-            print ("tie break")
-
+            
+            
             rezultat.text = "\(brojac.incrementByOne())"
             
         }
@@ -99,18 +102,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             
             
-            
-            /* else if rezultat.text! >= "\(6)" && displayValue2 >= 6 &&
-             displayValue == displayValue2 + 2 {
-             rezultat.text = "\(brojac.reset0())"
-             displayValue2 = brojac2.reset00()
-             
-             
-             
-             
-             
-             }
-             */
         else { rezultat.text = "\(brojac.increment())"
         }
         
@@ -166,7 +157,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
         }
         else if rezultat.text! == "\(7)" && rezultat2.text! < "\(6)" {
-            print ("set")
             rezultat.text = "\(brojac.reset0())"
             rezultat.text = "\(brojac.reset())"
             rezultat2.text = "\(brojac2.reset2())"
@@ -198,8 +188,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             setRez.text = "\(setBrojac.incrementByOne())"
             gemRez.text = "\(brojac3.reset3())"
             gemRez2.text = "\(brojac4.reset4())"
-
-            }
+            
+        }
         else if displayValue2 >= 6 && displayValue >= 6 &&
             displayValue2 == displayValue + 2 {
             rezultat2.text = "\(brojac2.reset00())"
@@ -209,11 +199,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
             setRez2.text = "\(setBrojac2.incrementByOne())"
             gemRez.text = "\(brojac3.reset3())"
             gemRez2.text = "\(brojac4.reset4())"
-
+            
             
         }
-
-
+            
+            
         else if gemRez.text == "\(6)" && gemRez2.text! < "\(5)" {
             gemRez.text = "\(brojac3.reset3())"
             gemRez2.text = "\(brojac4.reset4())"
@@ -247,13 +237,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func poen2(_ sender: Any) {
         if gemRez.text == "\(6)" && gemRez2.text == "\(6)" {
-            print ("tie break")
-
+            
             rezultat2.text = "\(brojac2.incrementByOne())"
         }
         else if rezultat2.text! == "\(7)" && rezultat.text! < "\(6)" {
-            print ("set")
-
+            
             rezultat2.text = "\(brojac2.reset00())"
             rezultat.text = "\(brojac.reset0())"
             rezultat.text = "\(brojac.reset())"
@@ -265,8 +253,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             
         else if rezultat.text! == "\(7)" && rezultat2.text! < "\(6)" {
-            print ("set")
-
+            
             rezultat.text = "\(brojac.reset0())"
             rezultat.text = "\(brojac.reset())"
             rezultat2.text = "\(brojac2.reset2())"
@@ -274,13 +261,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
             
             
-            
-            /*   else if displayValue2 >= 6 && rezultat.text! >= "\(6)" &&
-             displayValue2 == displayValue + 2 {
-             rezultat.text = "\(brojac.reset0())"
-             displayValue2 = brojac2.reset00()
-             
-             } */
             
         else {
             
@@ -333,7 +313,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
         }
         else if rezultat.text! == "\(7)" && rezultat2.text! < "\(6)" {
-            print ("set")
             rezultat.text = "\(brojac.reset0())"
             rezultat.text = "\(brojac.reset())"
             rezultat2.text = "\(brojac2.reset2())"
@@ -341,11 +320,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             setRez.text = "\(setBrojac.incrementByOne())"
             gemRez.text = "\(brojac3.reset3())"
             gemRez2.text = "\(brojac4.reset4())"
-
+            
         }
             
         else if rezultat2.text! == "\(7)" && rezultat.text! < "\(6)" {
-            print ("set")
             
             rezultat2.text = "\(brojac2.reset00())"
             rezultat.text = "\(brojac.reset0())"
@@ -380,8 +358,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             
         }
-
-
+            
+            
         else if gemRez2.text == "\(6)" && gemRez.text! < "\(5)" {
             gemRez.text = "\(brojac3.reset3())"
             gemRez2.text = "\(brojac4.reset4())"
