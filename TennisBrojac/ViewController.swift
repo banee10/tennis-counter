@@ -60,7 +60,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var textField2: UITextField!
     
-    /* var displayValue: Int {
+     private var displayValue: Int {
      get {
      return Int(rezultat.text!)!
      
@@ -71,7 +71,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
      
      }
      }
-     var displayValue2: Int {
+     private var displayValue2: Int {
      get {
      return Int(rezultat2.text!)!
      
@@ -83,7 +83,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
      }
      }
      
-     */
+    
     
     
     
@@ -189,6 +189,30 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             
         }
+        else if displayValue >= 6 && displayValue2 >= 6 &&
+            displayValue == displayValue2 + 2 {
+            rezultat.text = "\(brojac.reset0())"
+            rezultat.text = "\(brojac.reset())"
+            rezultat2.text = "\(brojac2.reset2())"
+            rezultat2.text = "\(brojac2.reset00())"
+            setRez.text = "\(setBrojac.incrementByOne())"
+            gemRez.text = "\(brojac3.reset3())"
+            gemRez2.text = "\(brojac4.reset4())"
+
+            }
+        else if displayValue2 >= 6 && displayValue >= 6 &&
+            displayValue2 == displayValue + 2 {
+            rezultat2.text = "\(brojac2.reset00())"
+            rezultat.text = "\(brojac.reset0())"
+            rezultat.text = "\(brojac.reset())"
+            rezultat2.text = "\(brojac2.reset2())"
+            setRez2.text = "\(setBrojac2.incrementByOne())"
+            gemRez.text = "\(brojac3.reset3())"
+            gemRez2.text = "\(brojac4.reset4())"
+
+            
+        }
+
 
         else if gemRez.text == "\(6)" && gemRez2.text! < "\(5)" {
             gemRez.text = "\(brojac3.reset3())"
@@ -333,6 +357,30 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             
         }
+        else if displayValue >= 6 && displayValue2 >= 6 &&
+            displayValue == displayValue2 + 2 {
+            rezultat.text = "\(brojac.reset0())"
+            rezultat.text = "\(brojac.reset())"
+            rezultat2.text = "\(brojac2.reset2())"
+            rezultat2.text = "\(brojac2.reset00())"
+            setRez.text = "\(setBrojac.incrementByOne())"
+            gemRez.text = "\(brojac3.reset3())"
+            gemRez2.text = "\(brojac4.reset4())"
+            
+        }
+        else if displayValue2 >= 6 && displayValue >= 6 &&
+            displayValue2 == displayValue + 2 {
+            rezultat2.text = "\(brojac2.reset00())"
+            rezultat.text = "\(brojac.reset0())"
+            rezultat.text = "\(brojac.reset())"
+            rezultat2.text = "\(brojac2.reset2())"
+            setRez2.text = "\(setBrojac2.incrementByOne())"
+            gemRez.text = "\(brojac3.reset3())"
+            gemRez2.text = "\(brojac4.reset4())"
+            
+            
+        }
+
 
         else if gemRez2.text == "\(6)" && gemRez.text! < "\(5)" {
             gemRez.text = "\(brojac3.reset3())"
