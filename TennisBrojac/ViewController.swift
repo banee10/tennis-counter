@@ -86,11 +86,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
-    
-    
-    
-    
     @IBAction func poen(_ sender: Any) {
         if gemRez.text == "\(6)" && gemRez2.text == "\(6)" {
             
@@ -227,8 +222,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
             gemRez2.text = "\(brojac4.reset4())"
             setRez2.text = "\(setBrojac2.incrementByOne())"
         }
-        
-        
         
         
     }
