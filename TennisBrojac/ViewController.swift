@@ -233,29 +233,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             rezultat2.text = "\(brojac2.incrementByOne())"
         }
-        else if rezultat2.text! == "\(7)" && rezultat.text! < "\(6)" {
             
-            rezultat2.text = "\(brojac2.reset00())"
-            rezultat.text = "\(brojac.reset0())"
-            rezultat.text = "\(brojac.reset())"
-            rezultat2.text = "\(brojac2.reset2())"
-            
-            
-        }
-            
-            
-            
-        else if rezultat.text! == "\(7)" && rezultat2.text! < "\(6)" {
-            
-            rezultat.text = "\(brojac.reset0())"
-            rezultat.text = "\(brojac.reset())"
-            rezultat2.text = "\(brojac2.reset2())"
-            rezultat2.text = "\(brojac2.reset00())"
-        }
-            
-            
-            
-        else {
+         else {
             
             rezultat2.text = "\(brojac2.increment())"
         }
